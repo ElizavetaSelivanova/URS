@@ -4,26 +4,6 @@
 	<meta charset="UTF-8">
 	<title></title>
 	<style type="text/css">
-		.hand{width: 30px; height: 3px; background: #000;
-
-			-webkit-transition: all .2s;
-			-moz-transition: all .2s;
-			-ms-transition: all .2s;
-			-o-transition: all .2s;
-			transition: all .2s;}
-		._left{-webkit-transform: rotateZ(10deg) translateY(0);
-			-moz-transform: rotateZ(10deg) translateY(0);
-			-ms-transform: rotateZ(10deg) translateY(0);
-			-o-transform: rotateZ(10deg) translateY(0);
-			transform: rotateZ(10deg) translateY(0);}
-
-		._right{
-			-webkit-transform: rotateZ(100deg) translateY(0);
-			-moz-transform: rotateZ(100deg) translateY(0);
-			-ms-transform: rotateZ(100deg) translateY(0);
-			-o-transform: rotateZ(100deg) translateY(0);
-			transform: rotateZ(100deg) translateY(0);
-		}
 	</style>
 	<link rel="stylesheet" href="normalize.css">
 	<link rel="stylesheet" href="index.css">
@@ -35,7 +15,12 @@
 <div class="js-test-wrapper"></div>
 <!--by Lizun-->
 <div class="dancer-wrapper">
-	<div class="dancer-head"></div>
+	<div class="dancer-head">
+		<div class="dancer-eye _eye_left"></div>
+		<div class="dancer-eye _eye_right"></div>
+		<div class="dancer-mouse"></div>
+	</div>
+	<img src="img/sharf.png" class="dancer-scarf"/>
 	<div class="dancer-body"></div>
 	<div class="dancer-hand _left_hand"></div>
 	<div class="dancer-hand _right_hand"></div>

@@ -12,13 +12,40 @@ body {width: 100%;}
 	-o-transition: all .3s;
 	transition: all .3s;}
 
-.dancer-head{top: 0; left: 0; right: 0; margin: 0 auto; width: 150px; height: 150px; border: 1px solid #000;
+.dancer-head{top: 0; left: 0; right: 0; margin: 0 auto; width: 150px; height: 150px; border: 2px solid #000;
 	border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;}
-.dancer-body{top:151px; left: 0; right: 0; margin: 0 auto; height: 200px; width: 3px; background: #000;}
-.dancer-hand{width: 100px; height: 2px;}
-.dancer-hand._left_hand{}
-.dancer-hand._right_hand{}
-.dancer-leg{}
-.dancer-leg._left_leg{}
-.dancer-leg._right_leg{}
+		.dancer-mouse{position: absolute;width: 70px;height: 40px;border-bottom: 5px solid #000;bottom: 25px;left: 0;right: 0;margin: 0 auto;
+			border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;}
+		.dancer-eye{position: absolute; top: 40px; width: 10px; height: 10px; background: #000;
+			border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;}
+			.dancer-eye._eye_left{left: 30px;}
+			.dancer-eye._eye_right{right: 30px;}
+.dancer-body{top:151px; left: 0; right: 0; margin: 0 auto; height: 200px; width: 7px; background: #000;}
+	.dancer-scarf{position: absolute;width: 100px;margin: 0 auto;left: 0;right: 0;top: 136px;}
+.dancer-hand{top: 151px;  width: 150px; height: 4px; background: #000;}
+.dancer-hand._left_hand{left: 322px;
+	-webkit-transform: rotateZ(95deg) translateX(50%);
+	-moz-transform: rotateZ(95deg) translateX(50%);
+	-ms-transform: rotateZ(95deg) translateX(50%);
+	-o-transform: rotateZ(95deg) translateX(50%);
+	transform: rotateZ(95deg) translateX(50%);}
+.dancer-hand._right_hand{left: 327px;
+	-webkit-transform: rotateZ(85deg) translateX(50%);
+	-moz-transform: rotateZ(85deg) translateX(50%);
+	-ms-transform: rotateZ(85deg) translateX(50%);
+	-o-transform: rotateZ(85deg) translateX(50%);
+	transform: rotateZ(85deg) translateX(50%);}
+.dancer-leg{top: 348px; width: 160px; height: 5px; background: #000;}
+.dancer-leg._left_leg{left: 319px;
+	-webkit-transform: rotateZ(95deg) translateX(50%);
+	-moz-transform: rotateZ(95deg) translateX(50%);
+	-ms-transform: rotateZ(95deg) translateX(50%);
+	-o-transform: rotateZ(95deg) translateX(50%);
+	transform: rotateZ(95deg) translateX(50%);}
+.dancer-leg._right_leg{left: 320px;
+	-webkit-transform: rotateZ(85deg) translateX(50%);
+	-moz-transform: rotateZ(85deg) translateX(50%);
+	-ms-transform: rotateZ(85deg) translateX(50%);
+	-o-transform: rotateZ(85deg) translateX(50%);
+	transform: rotateZ(85deg) translateX(50%);}
 /*end by Lizun*/
