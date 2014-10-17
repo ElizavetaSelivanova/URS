@@ -10,10 +10,5 @@ $(document).ready(function(){
 	];
 	var humanPosition {position: [0,0,0,0], moveActiveId: ""};
 
-	var testText = "";
-	$moveBase.each(function(){
-		testText+="<p>"+$(this).id+"</p>"
-	})
-	$('.js')
 })
 //IRA's CODE END

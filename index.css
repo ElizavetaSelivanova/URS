@@ -1,5 +1,9 @@
 .test-block{
 	background: #efefef; border: 1px solid #555;
+<<<<<<< HEAD
+}
+=======
+}
 
 /*by Lizun*/
 body {width: 100%;}
@@ -21,4 +25,4 @@ body {width: 100%;}
 .dancer-leg._left_leg{}
 .dancer-leg._right_leg{}
 /*end by Lizun*/
-
+>>>>>>> origin/master
