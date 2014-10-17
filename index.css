@@ -1,4 +1,24 @@
 .test-block{
 	background: #efefef; border: 1px solid #555;
 }
-hiuhiuh
+
+/*by Lizun*/
+body {width: 100%;}
+.dancer-wrapper{margin: 50px auto; position: relative; width: 800px; height: 800px;}
+.dancer-wrapper div{position: absolute;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-ms-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;}
+
+.dancer-head{top: 0; left: 0; right: 0; margin: 0 auto; width: 150px; height: 150px; border: 1px solid #000;
+	border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;}
+.dancer-body{top:151px; left: 0; right: 0; margin: 0 auto; height: 200px; width: 3px; background: #000;}
+.dancer-hand{width: 100px; height: 2px;}
+.dancer-hand._left_hand{}
+.dancer-hand._right_hand{}
+.dancer-leg{}
+.dancer-leg._left_leg{}
+.dancer-leg._right_leg{}
+/*end by Lizun*/
