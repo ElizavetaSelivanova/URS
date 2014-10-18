@@ -46,6 +46,7 @@ body {width: 100%;}
 	-ms-transform: rotateZ(85deg) translateX(50%);
 	-o-transform: rotateZ(85deg) translateX(50%);
 	transform: rotateZ(85deg) translateX(50%);}
+
 .dancer-leg{top: 348px; width: 160px; height: 5px; background: #000;}
 .dancer-leg._left_leg{left: 320px;
 	-webkit-transform: rotateZ(95deg) translateX(50%);
@@ -59,6 +60,7 @@ body {width: 100%;}
 	-ms-transform: rotateZ(85deg) translateX(50%);
 	-o-transform: rotateZ(85deg) translateX(50%);
 	transform: rotateZ(85deg) translateX(50%);}
+
 .dancer-make_beauty{position: relative; left: 20px;width: 140px; height: 40px; display: table-cell;vertical-align: middle;text-align: center;color: #fff; background: #d3775f;
 	-webkit-transition: all .2s;
 	-moz-transition: all .2s;
@@ -68,5 +70,9 @@ body {width: 100%;}
 	.dancer-make_beauty:hover{cursor: pointer; background: #ab5e50;}
 	.dancer-make_beauty._active{background: #8d8487;}
 /*end by Lizun*/
+
+/*end by Lizun*/
+.beat-blovck { padding: 20px 0; width: 100%; text-align: center; font-size: 27px; }
+
 
 
