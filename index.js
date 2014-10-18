@@ -32,8 +32,12 @@ $(document).ready(function(){
 //by Liza
 //clothing for dancer
 $('.dancer-make_beauty').on('click', function(){
+	if(!$(this).hasClass('_active')){
 		$(this).addClass('_active').text('Раздеть ;)');
 		$('.dancer-cap, .dancer-scarf').addClass('_active');
+	}else if($(this).hasClass('_active')){
+		$(this).removeClass('_active').text('Сделать красиво ;)');
+		$('.dancer-cap, .dancer-scarf').removeClass('_active');}
 });
 
 //end by Liza
