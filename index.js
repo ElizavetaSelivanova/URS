@@ -28,3 +28,12 @@ $(document).ready(function(){
 	})*/
 })
 //IRA's CODE END
+
+//by Liza
+//clothing for dancer
+$('.dancer-make_beauty').on('click', function(){
+		$(this).addClass('_active').text('Раздеть ;)');
+		$('.dancer-cap, .dancer-scarf').addClass('_active');
+});
+
+//end by Liza

@@ -1,6 +1,6 @@
 /*by Lizun*/
 body {width: 100%;}
-.dancer-wrapper{margin: 50px auto; position: relative; width: 800px; height: 800px;}
+.dancer-wrapper{margin: 30px auto 0; position: relative; width: 800px; height: 510px;}
 .dancer-wrapper div{position: absolute;
 	-webkit-transition: all .3s;
 	-moz-transition: all .3s;
@@ -8,7 +8,7 @@ body {width: 100%;}
 	-o-transition: all .3s;
 	transition: all .3s;}
 
-.dancer-head{top: 0; left: 0; right: 0; margin: 0 auto; width: 150px; height: 150px; border: 2px solid #000;
+.dancer-head{top: 0; left: 0; right: 0; margin: 0 auto; background: #fff; width: 150px; height: 150px; border: 2px solid #000; z-index: 3;
 	border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;}
 
 		.dancer-mouse{position: absolute;width: 70px;height: 40px;border-bottom: 5px solid #000;bottom: 25px;left: 0;right: 0;margin: 0 auto;
@@ -17,9 +17,23 @@ body {width: 100%;}
 			border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;}
 			.dancer-eye._eye_left{left: 30px;}
 			.dancer-eye._eye_right{right: 30px;}
-.dancer-body{top:151px; left: 0; right: 0; margin: 0 auto; height: 200px; width: 7px; background: #000;}
-	.dancer-scarf{position: absolute;width: 100px;margin: 0 auto;left: 0;right: 0;top: 136px;}
-.dancer-hand{top: 151px;  width: 150px; height: 4px; background: #000;}
+.dancer-body{top:151px; left: 0; right: 0; margin: 0 auto; height: 200px; width: 7px; background: #000;z-index: 1;}
+	.dancer-scarf{opacity: 0;position: absolute;width: 100px;margin: 0 auto;left: 0;right: 0;top: 136px; z-index: 2;
+		-webkit-transition: all .5s;
+		-moz-transition: all .5s;
+		-ms-transition: all .5s;
+		-o-transition: all .5s;
+		transition: all .5s;}
+
+	.dancer-cap{opacity: 0; position: absolute; width: 100px; top: -30px; left: -8px;
+		-webkit-transition: all .5s;
+		-moz-transition: all .5s;
+		-ms-transition: all .5s;
+		-o-transition: all .5s;
+		transition: all .5s;}
+		.dancer-cap._active, .dancer-scarf._active{opacity: 1;}
+
+.dancer-hand{top: 151px;  width: 150px; height: 4px; background: #000;z-index: 1;}
 .dancer-hand._left_hand{left: 322px;
 	-webkit-transform: rotateZ(95deg) translateX(50%);
 	-moz-transform: rotateZ(95deg) translateX(50%);
@@ -33,27 +47,26 @@ body {width: 100%;}
 	-o-transform: rotateZ(85deg) translateX(50%);
 	transform: rotateZ(85deg) translateX(50%);}
 .dancer-leg{top: 348px; width: 160px; height: 5px; background: #000;}
-.dancer-leg._left_leg{left: 319px;
+.dancer-leg._left_leg{left: 320px;
 	-webkit-transform: rotateZ(95deg) translateX(50%);
 	-moz-transform: rotateZ(95deg) translateX(50%);
 	-ms-transform: rotateZ(95deg) translateX(50%);
 	-o-transform: rotateZ(95deg) translateX(50%);
 	transform: rotateZ(95deg) translateX(50%);}
-.dancer-leg._right_leg{left: 320px;
+.dancer-leg._right_leg{left: 321px;
 	-webkit-transform: rotateZ(85deg) translateX(50%);
 	-moz-transform: rotateZ(85deg) translateX(50%);
 	-ms-transform: rotateZ(85deg) translateX(50%);
 	-o-transform: rotateZ(85deg) translateX(50%);
 	transform: rotateZ(85deg) translateX(50%);}
-/*end by Lizun*/
-
-.dancer-body{top:151px; left: 0; right: 0; margin: 0 auto; height: 200px; width: 3px; background: #000;}
-.dancer-hand{width: 100px; height: 2px;}
-.dancer-hand._left_hand{}
-.dancer-hand._right_hand{}
-.dancer-leg{}
-.dancer-leg._left_leg{}
-.dancer-leg._right_leg{}
+.dancer-make_beauty{position: relative; left: 20px;width: 140px; height: 40px; display: table-cell;vertical-align: middle;text-align: center;color: #fff; background: #d3775f;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	-ms-transition: all .2s;
+	-o-transition: all .2s;
+	transition: all .2s;}
+	.dancer-make_beauty:hover{cursor: pointer; background: #ab5e50;}
+	.dancer-make_beauty._active{background: #8d8487;}
 /*end by Lizun*/
 
 
