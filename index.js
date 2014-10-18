@@ -36,13 +36,13 @@ $(document).ready(function(){
         }
 	});
 
-    $('.js-start-dance').click(function(){
-        generateMovesList();
-    })
+
+
     $('.button-start').on('click', function(){
         $('.dancer-wrapper, .bottom-buttons').fadeIn();
         $(".js-beat-finish, .js-beat-start").addClass("hidden");
-        $('.js-buttons-block').hide()
+        $('.js-buttons-block').hide();
+        generateMovesList();
     });
 });
 
@@ -81,7 +81,6 @@ var checkBeat = function(){
             start = new Date();
             recordedBeatArray.push(0);
         }
-        console.log(recordedBeatArray)
     });
 }
 //IRA's CODE END//IRA's CODE END
