@@ -4,15 +4,15 @@
  //IRA's CODE BEGIN
  var moveBase = [
 		//position layout [Left Hand, Right Hand, Left Leg, Right Leg] 1 - if active
-		{id: 1, name: "lHandUp", functionName: "", x:"", y:"",time: "0,3", position: [1,0,0,0]},
-		{id: 2, name: "rHandUp", functionName: "", x:"", y:"", time: "0,2", position: [0,1,0,0]},
-		{id: 3, name: "lLegToSide", functionName: "", x:"", y:"", time:"0,1", position: [0,0,1,0]},
-		{id: 4, name: "rLegToSide", functionName: "", x:"", y:"", time: "0,3", position: [0,0,0,1]},
-		{id: 5, name: "lHandToSide", functionName: "", x:"", y:"", time:"0,2", position: [1,0,0,0]},
-		{id: 6, name: "rHandToSide", functionName: "", x:"", y:"",time:"0,3", position: [0,1,0,0]},
-		{id: 7, name: "mixer", functionName: "", x:"", y:"", time:"0,1",position: [1,1,1,1]}
+		{id: 1, name: "lHandUp", functionName: "", x:"175", y:"95",time: "0,3", position: [1,0,0,0]},
+		{id: 2, name: "rHandUp", functionName: "", x:"5", y:"85", time: "0,2", position: [0,1,0,0]},
+		{id: 3, name: "lLegToSide", functionName: "", x:"15", y:"95", time:"0,1", position: [0,0,1,0]},
+		{id: 4, name: "rLegToSide", functionName: "", x:"165", y:"85", time: "0,3", position: [0,0,0,1]},
+		{id: 5, name: "lHandToSide", functionName: "", x:"210", y:"95", time:"0,2", position: [1,0,0,0]},
+		{id: 6, name: "rHandToSide", functionName: "", x:"-25", y:"85",time:"0,3", position: [0,1,0,0]}
+/*		{id: 7, name: "mixer", functionName: "", x:"", y:"", time:"0,1",position: [1,1,1,1]}*/
 	];
-    var idBodyParts = ['._right_hand','._left_hand','._right_leg','._left_leg'];//for position identifikate
+    var idBodyParts = ["._right_hand","._left_hand","._right_leg","._left_leg"];//for position identifikate
 	var humanPosition = {position: [0,0,0,0]};
     var recordedBeatArray = [];
     var ifRecordBeat = 0;
@@ -50,21 +50,6 @@ $(document).ready(function(){
     });
 });
 
-//	rotate(rightHand, 200, 1)
-//	setTimeout(function(){
-//		rotate(leftHand, 50, 1)
-//
-//	}, 2000)
-
-
-	/*$('.js-test-block').click(function(){
-		var testText = "";
-		$.each(moveBase, function(k,v){
-			console.log(v.name)
-		})
-
-		$(".js-test-wrapper").append(testText);
-	})*/
 
 
 var checkBeat = function(){
@@ -87,7 +72,7 @@ var checkBeat = function(){
         }
     });
 }
-//IRA's CODE END//IRA's CODE END
+
 
 //by Liza
 //clothing for dancer
@@ -101,11 +86,6 @@ $('.dancer-make_beauty').on('click', function(){
 });
 
 //function for rotate
-
-var rightHand = $('._right_hand'),
-	leftHand = $('._left_hand'),
-	rightLeg = $('._right_leg'),
-	leftLeg = $('._left_leg');
 
 
 function rotate(whatRotate, degree, time) {
@@ -136,9 +116,35 @@ var generateMovesList = function(){
 }
 
 var playDance = function(dance){
-    var whatRotate, degree, time;
-    $(dance).each(function(k,v){
-        console.log(moveBase[v].name)
-    })
+    var whatRotateId, whatRotateElement, time;
+    var timeOut;
+    var i = 0;
+    var displayNumber = function() {
+        humanPosition = moveBase[dance[i]].position;
+        for (var j=0; j<=humanPosition.length;j++){
+           if (humanPosition[j]==1){
+               whatRotateId = j;
+           }
+        }
+        whatRotateElement = $(idBodyParts[whatRotateId])
+        if (i>0){
+            timeOut  = recordedBeatArray[i-1]*1000;
+            rotate(whatRotateElement, moveBase[dance[i]].x ,recordedBeatArray[i]);
+        }else{
+            timeOut = 0;
+        }
+        i++;
+        if (i < dance.length) {
+            if (i>0){
+                if (dance[i]==dance[i-1]){
+                    rotate(whatRotateElement, moveBase[dance[i]].y ,0.1);
+                }
+            }
+
+            setTimeout(displayNumber, timeOut);
+        }
+    };
+
+    displayNumber(); // to get the ball rolling
 }
 //end by Liza
