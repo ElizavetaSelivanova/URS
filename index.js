@@ -4,20 +4,21 @@
  //IRA's CODE BEGIN
  var moveBase = [
 		//position layout [Left Hand, Right Hand, Left Leg, Right Leg] 1 - if active
-		{id: 1, name: "lHandUp", functionName: "", x:"", y:"", position: [1,0,0,0]},
-		{id: 2, name: "rHandUp", functionName: "", x:"", y:"", position: [0,1,0,0]},
-		{id: 3, name: "lLegToSide", functionName: "", x:"", y:"", position: [0,0,1,0]},
-		{id: 4, name: "rLegToSide", functionName: "", x:"", y:"", position: [0,0,0,1]},
-		{id: 5, name: "lHandToSide", functionName: "", x:"", y:"", position: [1,0,0,0]},
-		{id: 6, name: "rHandToSide", functionName: "", x:"", y:"", position: [0,1,0,0]},
-		{id: 7, name: "mixer", functionName: "", x:"", y:"", position: [1,1,1,1]}
+		{id: 1, name: "lHandUp", functionName: "", x:"", y:"",time: "0,3", position: [1,0,0,0]},
+		{id: 2, name: "rHandUp", functionName: "", x:"", y:"", time: "0,2", position: [0,1,0,0]},
+		{id: 3, name: "lLegToSide", functionName: "", x:"", y:"", time:"0,1", position: [0,0,1,0]},
+		{id: 4, name: "rLegToSide", functionName: "", x:"", y:"", time: "0,3", position: [0,0,0,1]},
+		{id: 5, name: "lHandToSide", functionName: "", x:"", y:"", time:"0,2", position: [1,0,0,0]},
+		{id: 6, name: "rHandToSide", functionName: "", x:"", y:"",time:"0,3", position: [0,1,0,0]},
+		{id: 7, name: "mixer", functionName: "", x:"", y:"", time:"0,1",position: [1,1,1,1]}
 	];
-
-	var humanPosition = {position: [0,0,0,0], moveActiveId: "1111"};
+    var idBodyParts = ['._right_hand','._left_hand','._right_leg','._left_leg'];//for position identifikate
+	var humanPosition = {position: [0,0,0,0]};
     var recordedBeatArray = [];
     var ifRecordBeat = 0;
 	var start;
     var end;
+    var danceResult=[];
 $(document).ready(function(){
 	$(".beat-block").click(function(){
         if (ifRecordBeat==0){
