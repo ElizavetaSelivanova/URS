@@ -9,7 +9,19 @@
 		{id: 3, name: "lLegToSide", functionName: "", x:"15", y:"95", time:"0,1", position: [0,0,1,0]},
 		{id: 4, name: "rLegToSide", functionName: "", x:"165", y:"85", time: "0,3", position: [0,0,0,1]},
 		{id: 5, name: "lHandToSide", functionName: "", x:"210", y:"95", time:"0,2", position: [1,0,0,0]},
-		{id: 6, name: "rHandToSide", functionName: "", x:"-25", y:"85",time:"0,3", position: [0,1,0,0]}
+		{id: 6, name: "rHandToSide", functionName: "", x:"-25", y:"85",time:"0,3", position: [0,1,0,0]},
+        {id: 7, name: "lHandUp", functionName: "", x:"195", y:"95",time: "0,3", position: [1,0,0,0]},
+		{id: 8, name: "rHandUp", functionName: "", x:"-10", y:"85", time: "0,2", position: [0,1,0,0]},
+		{id: 9, name: "lLegToSide", functionName: "", x:"25", y:"95", time:"0,1", position: [0,0,1,0]},
+		{id: 10, name: "rLegToSide", functionName: "", x:"135", y:"85", time: "0,3", position: [0,0,0,1]},
+		{id: 11, name: "lHandToSide", functionName: "", x:"230", y:"95", time:"0,2", position: [1,0,0,0]},
+		{id: 12, name: "rHandToSide", functionName: "", x:"-45", y:"85",time:"0,3", position: [0,1,0,0]},
+        {id: 13, name: "lHandUp", functionName: "", x:"205", y:"95",time: "0,3", position: [1,0,0,0]},
+		{id: 14, name: "rHandUp", functionName: "", x:"45", y:"85", time: "0,2", position: [0,1,0,0]},
+		{id: 15, name: "lLegToSide", functionName: "", x:"55", y:"95", time:"0,1", position: [0,0,1,0]},
+		{id: 16, name: "rLegToSide", functionName: "", x:"195", y:"85", time: "0,3", position: [0,0,0,1]},
+		{id: 17, name: "lHandToSide", functionName: "", x:"220", y:"95", time:"0,2", position: [1,0,0,0]},
+		{id: 18, name: "rHandToSide", functionName: "", x:"-65", y:"85",time:"0,3", position: [0,1,0,0]}
 /*		{id: 7, name: "mixer", functionName: "", x:"", y:"", time:"0,1",position: [1,1,1,1]}*/
 	];
     var idBodyParts = ["._right_hand","._left_hand","._right_leg","._left_leg"];//for position identifikate
