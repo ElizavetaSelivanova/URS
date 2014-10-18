@@ -110,7 +110,8 @@ body {width: 100%;}
 
 
 /*end by Lizun*/
-.beat-blovck { padding: 20px 0; width: 100%; text-align: center; font-size: 27px; }
+.beat-block { padding: 20px 0; width: 100%; text-align: center; font-size: 27px; }
+.hidden{ display: block; }
 
 
 
