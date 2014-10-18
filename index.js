@@ -16,8 +16,12 @@ $(document).ready(function(){
 
 	var humanPosition = {position: [0,0,0,0], moveActiveId: "1111"};
 
-	
-	
+	rotate(rightHand, 145);
+	setTimeout(function(){
+		rotate(rightHand, 80);
+	}, 2000)
+
+
 	/*$('.js-test-block').click(function(){
 		var testText = "";
 		$.each(moveBase, function(k,v){
@@ -39,5 +43,25 @@ $('.dancer-make_beauty').on('click', function(){
 		$(this).removeClass('_active').text('Сделать красиво ;)');
 		$('.dancer-cap, .dancer-scarf').removeClass('_active');}
 });
+
+//function for rotate
+
+var rightHand = $('._right_hand'),
+	leftHand = $('._left_hand'),
+	rightLeg = $('._right_leg'),
+	leftLeg = $('._left_leg');
+
+
+function rotate(whatRotate, degree) {
+	whatRotate.css({
+		'-webkit-transform': 'rotateZ(' + degree + 'deg) translateX(50%)',
+		'-moz-transform': 'rotateZ(' + degree + 'deg) translateX(50%)',
+		'-ms-transform': 'rotateZ(' + degree + 'deg) translateX(50%)',
+		'-o-transform': 'rotateZ(' + degree + 'deg) translateX(50%)',
+		'transform': 'rotateZ(' + degree + 'deg) translateX(50%)'
+	});
+}
+
+
 
 //end by Liza
