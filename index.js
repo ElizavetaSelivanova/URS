@@ -59,12 +59,12 @@ var checkBeat = function(){
             if (beatLength>=0.1){
                 recordedBeatArray.push(beatLength);
             }
-
         }
         else{
             start = new Date();
             recordedBeatArray.push(0);
         }
+        console.log(recordedBeatArray)
     });
 }
 //IRA's CODE END//IRA's CODE END

@@ -1,5 +1,9 @@
 /*by Lizun*/
-body {width: 100%;}
+body {width: 100%;
+-moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
 
 /*positions of hands and legs*/
 ._normal-position_left{-webkit-transform: rotateZ(95deg) translateX(50%);
@@ -35,7 +39,7 @@ body {width: 100%;}
 	-o-transform: rotateZ(0deg) translateX(50%);
 	transform: rotateZ(0deg) translateX(50%);
 }
-
+/*right-to side*/
 .right-not-up{
 	-webkit-transform: rotateZ(30deg) translateX(50%);
 	-moz-transform: rotateZ(30deg) translateX(50%);
@@ -111,7 +115,30 @@ body {width: 100%;}
 
 /*end by Lizun*/
 .beat-block { padding: 20px 0; width: 100%; text-align: center; font-size: 27px; }
-.hidden{ display: hidden; }
+.hidden{ display: none; }
 
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
 
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.flex-container li {
+  background: tomato;
+  padding: 10px 20px;
+  margin-top: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+}
