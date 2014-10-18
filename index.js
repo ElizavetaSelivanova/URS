@@ -2,8 +2,7 @@
  * Created by Liza on 17.10.2014.
  */
  //IRA's CODE BEGIN
-$(document).ready(function(){
-	var moveBase = [
+ var moveBase = [
 		//position layout [Left Hand, Right Hand, Left Leg, Right Leg] 1 - if active
 		{id: 1, name: "lHandUp", functionName: "", x:"", y:"", position: [1,0,0,0]},
 		{id: 2, name: "rHandUp", functionName: "", x:"", y:"", position: [0,1,0,0]},
@@ -15,9 +14,11 @@ $(document).ready(function(){
 	];
 
 	var humanPosition = {position: [0,0,0,0], moveActiveId: "1111"};
-
+$(document).ready(function(){
 	
-	
+	$(".beat-blovck").click(function(){
+		checkBeat();
+	})
 	/*$('.js-test-block').click(function(){
 		var testText = "";
 		$.each(moveBase, function(k,v){
@@ -26,5 +27,10 @@ $(document).ready(function(){
 		
 		$(".js-test-wrapper").append(testText);
 	})*/
+	
+	
 })
+var checkBeat = function(){
+	alert("fff");
+}
 //IRA's CODE END

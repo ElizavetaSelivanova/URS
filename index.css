@@ -32,6 +32,7 @@ body {width: 100%;}
 	-ms-transform: rotateZ(85deg) translateX(50%);
 	-o-transform: rotateZ(85deg) translateX(50%);
 	transform: rotateZ(85deg) translateX(50%);}
+
 .dancer-leg{top: 348px; width: 160px; height: 5px; background: #000;}
 .dancer-leg._left_leg{left: 319px;
 	-webkit-transform: rotateZ(95deg) translateX(50%);
@@ -46,14 +47,6 @@ body {width: 100%;}
 	-o-transform: rotateZ(85deg) translateX(50%);
 	transform: rotateZ(85deg) translateX(50%);}
 /*end by Lizun*/
-
-.dancer-body{top:151px; left: 0; right: 0; margin: 0 auto; height: 200px; width: 3px; background: #000;}
-.dancer-hand{width: 100px; height: 2px;}
-.dancer-hand._left_hand{}
-.dancer-hand._right_hand{}
-.dancer-leg{}
-.dancer-leg._left_leg{}
-.dancer-leg._right_leg{}
-/*end by Lizun*/
+.beat-blovck { padding: 20px 0; width: 100%; text-align: center; font-size: 27px; }
 
 
