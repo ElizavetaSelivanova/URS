@@ -26,16 +26,19 @@ $(document).ready(function(){
             ifRecordBeat = 1;
             $(".js-beat-start").addClass("hidden");
             $(".js-beat-finish").removeClass("hidden");
-			$('.js-buttons-block').fadeIn()
         }else{
             $('body').off("keydown");
             ifRecordBeat = 0;
             $(".js-beat-start").removeClass("hidden");
             $(".js-beat-finish").addClass("hidden");
-			$('.js-buttons-block').fadeOut()
+			$('.js-buttons-block').fadeIn()
         }
-	})
-
+	});
+	$('.button-start').on('click', function(){
+		$('.dancer-wrapper, .bottom-buttons').fadeIn();
+		$(".js-beat-finish, .js-beat-start").addClass("hidden");
+		$('.js-buttons-block').hide()
+	});
 //	rotate(rightHand, 200, 1)
 //	setTimeout(function(){
 //		rotate(leftHand, 50, 1)
