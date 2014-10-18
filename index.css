@@ -17,31 +17,7 @@ body {width: 100%;
 	-o-transform: rotateZ(85deg) translateX(50%);
 	transform: rotateZ(85deg) translateX(50%);
 }
-.left-up{
-	-webkit-transform: rotateZ(180deg) translateX(50%);
-	-moz-transform: rotateZ(180deg) translateX(50%);
-	-ms-transform: rotateZ(180deg) translateX(50%);
-	-o-transform: rotateZ(180deg) translateX(50%);
-	transform: rotateZ(180deg) translateX(50%);
-}
 
-.left-not-up{
-	-webkit-transform: rotateZ(150deg) translateX(50%);
-	-moz-transform: rotateZ(150deg) translateX(50%);
-	-ms-transform: rotateZ(150deg) translateX(50%);
-	-o-transform: rotateZ(150deg) translateX(50%);
-	transform: rotateZ(150deg) translateX(50%);
-}
-
-.right-up{}
-
-.right-not-up{
-	-webkit-transform: rotateZ(30deg) translateX(50%);
-	-moz-transform: rotateZ(30deg) translateX(50%);
-	-ms-transform: rotateZ(30deg) translateX(50%);
-	-o-transform: rotateZ(30deg) translateX(50%);
-	transform: rotateZ(30deg) translateX(50%);
-}
 /*end positions of hands and legs*/
 /*body */
 .rotate-dancer{
@@ -59,18 +35,13 @@ body {width: 100%;
 	transform: rotateX(360deg);}
 /*end */
 /*dancer first position*/
-.dancer-wrapper{margin: 30px auto 0; position: relative; width: 800px; height: 510px;
+.dancer-wrapper{display: none; margin: 30px auto 0; position: relative; width: 800px; height: 510px;
 	-webkit-transition: all .3s;
 	-moz-transition: all .3s;
 	-ms-transition: all .3s;
 	-o-transition: all .3s;
 	transition: all .3s;}
-.dancer-part{position: absolute;
-	-webkit-transition: all .3s;
-	-moz-transition: all .3s;
-	-ms-transition: all .3s;
-	-o-transition: all .3s;
-	transition: all .3s;}
+.dancer-part{position: absolute;}
 
 .dancer-head{top: 0; left: 0; right: 0; margin: 0 auto; background: #fff; width: 150px; height: 150px; border: 2px solid #000; z-index: 3;
 	border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;}
@@ -113,6 +84,9 @@ body {width: 100%;
 	transition: all .2s;}
 	.dancer-make_beauty:hover{cursor: pointer; background: #ab5e50;}
 	.dancer-make_beauty._active{background: #8d8487;}
+
+/*buttons block */
+.js-buttons-block{display: none;}
 
 
 /*end by Lizun*/

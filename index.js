@@ -24,16 +24,22 @@ $(document).ready(function(){
             checkBeat();
             ifRecordBeat = 1;
             $(".js-beat-start").addClass("hidden");
-            $(".js-beat-finish").removeClass("hidden")
+            $(".js-beat-finish").removeClass("hidden");
+			$('.js-buttons-block').fadeIn()
         }else{
             $('body').off("keydown");
             ifRecordBeat = 0;
             $(".js-beat-start").removeClass("hidden");
             $(".js-beat-finish").addClass("hidden");
+			$('.js-buttons-block').fadeOut()
         }
 	})
 
-
+//	rotate(rightHand, 200, 1)
+//	setTimeout(function(){
+//		rotate(leftHand, 50, 1)
+//
+//	}, 2000)
 
 
 	/*$('.js-test-block').click(function(){
@@ -89,13 +95,18 @@ var rightHand = $('._right_hand'),
 	leftLeg = $('._left_leg');
 
 
-function rotate(whatRotate, degree) {
+function rotate(whatRotate, degree, time) {
 	whatRotate.css({
 		'-webkit-transform': 'rotateZ(' + degree + 'deg) translateX(50%)',
 		'-moz-transform': 'rotateZ(' + degree + 'deg) translateX(50%)',
 		'-ms-transform': 'rotateZ(' + degree + 'deg) translateX(50%)',
 		'-o-transform': 'rotateZ(' + degree + 'deg) translateX(50%)',
-		'transform': 'rotateZ(' + degree + 'deg) translateX(50%)'
+		'transform': 'rotateZ(' + degree + 'deg) translateX(50%)',
+		'-webkit-transition': 'all '+ time +'s',
+		'-moz-transition': 'all '+ time +'s',
+		'-ms-transition': 'all '+ time +'s',
+		'-o-transition': 'all '+ time +'s',
+		'transition': 'all '+ time +'s'
 	});
 }
 
