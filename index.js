@@ -37,10 +37,9 @@ $(document).ready(function(){
 	});
 
 
-	$('body').keydown(function(e){
+	$('body').keydown(function(){
 		var randomColor = '#' + Math.random().toString(16).substring(2, 8);
-		console.log(randomColor)
-		$('.visual-look').css('color', randomColor)
+		$('.visual-look').css('color', randomColor);
 	});
 
     $('.button-start').on('click', function(){
