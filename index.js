@@ -26,22 +26,27 @@ $(document).ready(function(){
             ifRecordBeat = 1;
             $(".js-beat-start").addClass("hidden");
             $(".js-beat-finish").removeClass("hidden");
-			$('.js-buttons-block').fadeIn()
+			$('.js-buttons-block, .visual-look').fadeIn()
         }else{
             $('body').off("keydown");
             ifRecordBeat = 0;
             $(".js-beat-start").removeClass("hidden");
             $(".js-beat-finish").addClass("hidden");
-			$('.js-buttons-block').fadeOut()
+			$('.js-buttons-block, .visual-look').fadeOut();
         }
 	});
 
 
+	$('body').keydown(function(e){
+		var randomColor = '#' + Math.random().toString(16).substring(2, 8);
+		console.log(randomColor)
+		$('.visual-look').css('color', randomColor)
+	});
 
     $('.button-start').on('click', function(){
         $('.dancer-wrapper, .bottom-buttons').fadeIn();
         $(".js-beat-finish, .js-beat-start").addClass("hidden");
-        $('.js-buttons-block').hide();
+        $('.js-buttons-block, .visual-look').hide();
         generateMovesList();
     });
 });
