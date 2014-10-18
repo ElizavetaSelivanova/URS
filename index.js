@@ -2,8 +2,7 @@
  * Created by Liza on 17.10.2014.
  */
  //IRA's CODE BEGIN
-$(document).ready(function(){
-	var moveBase = [
+ var moveBase = [
 		//position layout [Left Hand, Right Hand, Left Leg, Right Leg] 1 - if active
 		{id: 1, name: "lHandUp", functionName: "", x:"", y:"", position: [1,0,0,0]},
 		{id: 2, name: "rHandUp", functionName: "", x:"", y:"", position: [0,1,0,0]},
@@ -11,15 +10,30 @@ $(document).ready(function(){
 		{id: 4, name: "rLegToSide", functionName: "", x:"", y:"", position: [0,0,0,1]},
 		{id: 5, name: "lHandToSide", functionName: "", x:"", y:"", position: [1,0,0,0]},
 		{id: 6, name: "rHandToSide", functionName: "", x:"", y:"", position: [0,1,0,0]},
-		{id: 7, name: "mixer", functionName: "", x:"", y:"", position: [1,1,1,1]},
+		{id: 7, name: "mixer", functionName: "", x:"", y:"", position: [1,1,1,1]}
 	];
 
 	var humanPosition = {position: [0,0,0,0], moveActiveId: "1111"};
+    var recordedBeatArray = [];
+    var ifRecordBeat = 0;
+	var start;
+    var end;
+$(document).ready(function(){
+	$(".beat-block").click(function(){
+        if (ifRecordBeat==0){
+            checkBeat();
+            ifRecordBeat = 1;
+            $(".js-beat-start").addClass("hidden");
+            $(".js-beat-finish").removeClass("hidden")
+        }else{
+            $('body').off("keydown");
+            ifRecordBeat = 0;
+            $(".js-beat-start").removeClass("hidden");
+            $(".js-beat-finish").addClass("hidden");
+        }
+	})
 
-	rotate(rightHand, 145);
-	setTimeout(function(){
-		rotate(rightHand, 80);
-	}, 2000)
+
 
 
 	/*$('.js-test-block').click(function(){
@@ -27,11 +41,34 @@ $(document).ready(function(){
 		$.each(moveBase, function(k,v){
 			console.log(v.name)
 		})
-		
+
 		$(".js-test-wrapper").append(testText);
 	})*/
+
+
 })
-//IRA's CODE END
+var checkBeat = function(){
+    var beatLength;
+	$('body').on("keydown", function(){
+        if (recordedBeatArray.length > 0 ){
+            if (end!=undefined){
+                start = end;
+            }
+            end = new Date();
+            beatLength = (end.getTime() - start.getTime())/1000;
+            beatLength = parseFloat(beatLength.toFixed(1));
+            if (beatLength>=0.1){
+                recordedBeatArray.push(beatLength);
+            }
+        }
+        else{
+            start = new Date();
+            recordedBeatArray.push(0);
+        }
+        console.log(recordedBeatArray)
+    });
+}
+//IRA's CODE END//IRA's CODE END
 
 //by Liza
 //clothing for dancer
