@@ -26,19 +26,26 @@ $(document).ready(function(){
             ifRecordBeat = 1;
             $(".js-beat-start").addClass("hidden");
             $(".js-beat-finish").removeClass("hidden");
+			$('.js-buttons-block').fadeIn()
         }else{
             $('body').off("keydown");
             ifRecordBeat = 0;
             $(".js-beat-start").removeClass("hidden");
             $(".js-beat-finish").addClass("hidden");
-			$('.js-buttons-block').fadeIn()
+			$('.js-buttons-block').fadeOut()
         }
 	});
-	$('.button-start').on('click', function(){
-		$('.dancer-wrapper, .bottom-buttons').fadeIn();
-		$(".js-beat-finish, .js-beat-start").addClass("hidden");
-		$('.js-buttons-block').hide()
-	});
+
+    $('.js-start-dance').click(function(){
+        generateMovesList();
+    })
+    $('.button-start').on('click', function(){
+        $('.dancer-wrapper, .bottom-buttons').fadeIn();
+        $(".js-beat-finish, .js-beat-start").addClass("hidden");
+        $('.js-buttons-block').hide()
+    });
+});
+
 //	rotate(rightHand, 200, 1)
 //	setTimeout(function(){
 //		rotate(leftHand, 50, 1)
@@ -56,7 +63,6 @@ $(document).ready(function(){
 	})*/
 
 
-})
 var checkBeat = function(){
     var beatLength;
 	$('body').on("keydown", function(){
@@ -115,5 +121,21 @@ function rotate(whatRotate, degree, time) {
 }
 
 
+var generateMovesList = function(){
+    var danceResult=[];
+    var moveLength;
+    moveLength = moveBase.length;
+    recordedBeatArray.splice(0,1);
+    $(recordedBeatArray).each(function(){
+        danceResult.push(Math.floor((Math.random() * (moveLength-1)) + 1));
+    });
+    playDance(danceResult);
+}
 
+var playDance = function(dance){
+    var whatRotate, degree, time;
+    $(dance).each(function(k,v){
+        console.log(moveBase[v].name)
+    })
+}
 //end by Liza
