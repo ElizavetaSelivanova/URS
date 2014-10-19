@@ -173,6 +173,12 @@ function rotate(whatRotate, degree, time) {
 
 }
 
+//move head
+function moveHead(positionLeft, time){
+	$('.dancer-head').animate({
+		'left': positionLeft
+	}, time);
+}
 
 var generateMovesList = function(){
     var moveLength;
