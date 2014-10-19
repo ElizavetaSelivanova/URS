@@ -26,7 +26,6 @@ body {width: 100%; font-family: Georgia, serif;
 	-ms-transform: rotateY(360deg);
 	-o-transform: rotateY(360deg);
 	transform: rotateY(360deg);}
-
 .mix{
 	-webkit-transform: rotateX(360deg);
 	-moz-transform: rotateX(360deg);
@@ -68,7 +67,7 @@ body {width: 100%; font-family: Georgia, serif;
 		transition: all .5s;}
 		.dancer-cap._active, .dancer-scarf._active{opacity: 1;}
 
-.dancer-hand{top: 151px;  width: 150px; height: 4px; background: #000;z-index: 1;}
+.dancer-hand{top: 151px;  width: 150px; height: 6px; background: #000;z-index: 4;}
 .dancer-hand._left_hand{left: 322px;}
 .dancer-hand._right_hand{left: 327px;}
 

@@ -127,5 +127,14 @@ body {width: 100%; font-family: Georgia, serif;
 }
 .header-wrapper{
     width:100%;
-    height:30px;
+    padding: 20px 0;
+    text-align: center;
+}
+.instruction {
+    display: inline-block;
+    margin: auto;
+}
+
+.instruction ul {
+    text-align: left;
 }
