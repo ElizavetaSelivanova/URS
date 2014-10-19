@@ -86,7 +86,7 @@ $(document).ready(function(){
 	});
 
     $('.button-start').on('click', function(){
-        $('.dancer-wrapper, .bottom-buttons').fadeIn();
+        $('.dancer-wrapper, .bottom-buttons, .buttons-move').fadeIn();
         $(".js-beat-start").addClass("hidden");
         $('.js-buttons-block, .visual-look').hide();
         generateMovesList();
@@ -115,6 +115,59 @@ $(document).ready(function(){
     $('.button-repeat').click(function(){
         location.reload();
     })
+
+
+	$('.move-head_button').on('click', function(){
+		if(!$(this).hasClass('_active')){
+			$(this).removeClass('_active');
+			$(this).addClass('_active');
+			$('.dancer-head').attr('style', '').addClass('move-head');
+		}else if($(this).hasClass('_active')){
+			$('.dancer-head').removeClass('move-head');
+			$(this).removeClass('_active');
+		}
+	});
+
+	$('.move-hand_button').on('click', function(){
+		if(!$(this).hasClass('_active')){
+			$(this).removeClass('_active');
+			$(this).addClass('_active');
+			$('._left_hand').attr('style', '').addClass('move-right-hand');
+			$('._right_hand').attr('style', '').addClass('move-left-hand');
+		}else if($(this).hasClass('_active')){
+			$('._left_hand').attr('style', '').removeClass('move-right-hand');
+			$('._right_hand').attr('style', '').removeClass('move-left-hand');
+			$(this).removeClass('_active');
+		}
+	});
+
+	$('.move-leg_button').on('click', function(){
+		if(!$(this).hasClass('_active')){
+			$(this).removeClass('_active');
+			$(this).addClass('_active');
+			$('._right_leg').attr('style', '').addClass('move-right-leg');
+			$('._left_leg').attr('style', '').addClass('move-left-leg');
+			$('.dancer-wrapper').addClass('move-jump');
+		}else if($(this).hasClass('_active')){
+			$('._right_leg').attr('style', '').removeClass('move-right-leg');
+			$('._left_leg').attr('style', '').removeClass('move-left-leg');
+			$('.dancer-wrapper').removeClass('move-jump');
+			$(this).removeClass('_active');
+		}
+	});
+
+	$('.move-shake_button').on('click', function(){
+		if(!$(this).hasClass('_active')){
+			$(this).addClass('_active');
+			$('.dancer-body').addClass('move-body');
+		}else if($(this).hasClass('_active')){
+			$('.dancer-body').removeClass('move-body');
+			$(this).removeClass('_active');
+		}
+	});
+
+
+
 });
 
 
@@ -153,6 +206,11 @@ $('.dancer-make_beauty').on('click', function(){
 		$(this).removeClass('_active').text('Сделать красиво ;)');
 		$('.dancer-cap, .dancer-scarf').removeClass('_active');}
 });
+
+
+
+
+
 
 //function for rotate
 
