@@ -37,29 +37,39 @@ $(document).ready(function(){
             checkBeat();
             ifRecordBeat = 1;
             $(".js-beat-start").addClass("hidden");
-            $(".js-beat-finish").removeClass("hidden");
 			$('.js-buttons-block, .visual-look').fadeIn()
-        }else{
-            $('body').off("keydown");
-            ifRecordBeat = 0;
-            $(".js-beat-start").removeClass("hidden");
-            $(".js-beat-finish").addClass("hidden");
-			$('.js-buttons-block, .visual-look').fadeOut();
         }
 	});
 
+    $('.button-start').on('click', function(){
+        $('.dancer-wrapper, .bottom-buttons').fadeIn();
+        $(".js-beat-start").addClass("hidden");
+        $('.js-buttons-block, .visual-look').hide();
+        generateMovesList();
+        $('body').off("keydown");
+        ifRecordBeat = 0;
+
+    });
 
 	$('body').keydown(function(){
 		var randomColor = '#' + Math.random().toString(16).substring(2, 8);
 		$('.visual-look').css('color', randomColor);
 	});
 
-    $('.button-start').on('click', function(){
-        $('.dancer-wrapper, .bottom-buttons').fadeIn();
-        $(".js-beat-finish, .js-beat-start").addClass("hidden");
-        $('.js-buttons-block, .visual-look').hide();
-        generateMovesList();
+
+
+    $('.button-play_again').click(function(){
+        $('.dancer-wrapper div').attr("style","")
+        playDance(danceResult);
     });
+
+    $('.button-do_again').click(function(){
+        location.reload();
+    });
+
+    $('.button-repeat').click(function(){
+        location.reload();
+    })
 });
 
 
@@ -117,7 +127,6 @@ function rotate(whatRotate, degree, time) {
 
 
 var generateMovesList = function(){
-    var danceResult=[];
     var moveLength;
     moveLength = moveBase.length;
     recordedBeatArray.splice(0,1);
@@ -128,6 +137,7 @@ var generateMovesList = function(){
 }
 
 var playDance = function(dance){
+    console.log(dance);
     var whatRotateId, whatRotateElement, time;
     var timeOut;
     var i = 0;
@@ -149,7 +159,8 @@ var playDance = function(dance){
         if (i < dance.length) {
             if (i>0){
                 if (dance[i]==dance[i-1]){
-                    rotate(whatRotateElement, moveBase[dance[i]].y ,0.1);
+                    rotate(whatRotateElement, moveBase[dance[i]].y ,0);
+                    /*whatRotateElement.attr("style","");*/
                 }
             }
 
@@ -159,4 +170,24 @@ var playDance = function(dance){
 
     displayNumber(); // to get the ball rolling
 }
+/*
+var randomNumber = function(){
+    var ifNumberTrue = 0;
+    var number;
+    var moveLength;
+    moveLength = moveBase.length;
+    number = Math.floor((Math.random() * (moveLength-1)) + 1);
+    if (humanPosition[2]==1||humanPosition[3]==1){
+        if (moveBase[number].position[2]==1||moveBase[number].position[3]==1){
+            ifNumberTrue = 1;
+            console.log("11");
+        }
+    }
+    if (ifNumberTrue != 0){
+        randomNumber();
+    }else{
+        return number;
+    }
+}
+*/
 //end by Liza

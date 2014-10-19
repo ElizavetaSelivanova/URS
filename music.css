@@ -35,7 +35,7 @@ body {width: 100%; font-family: Georgia, serif;
 	transform: rotateX(360deg);}
 /*end */
 /*dancer first position*/
-.dancer-wrapper{display: none; margin: 0 auto; position: relative; width: 800px; height: 510px;
+.dancer-wrapper{ margin: 0 auto; position: relative; width: 800px; height: 510px;
 	-webkit-transition: all .3s;
 	-moz-transition: all .3s;
 	-ms-transition: all .3s;
@@ -47,7 +47,7 @@ body {width: 100%; font-family: Georgia, serif;
 	border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;}
 
 		.dancer-mouse{position: absolute;width: 70px;height: 40px;border-bottom: 5px solid #000;bottom: 25px;left: 0;right: 0;margin: 0 auto;
-			border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;}
+			border-radius: 34%; -webkit-border-radius: 34%; -moz-border-radius: 34%;}
 		.dancer-eye{position: absolute; top: 40px; width: 10px; height: 10px; background: #000;
 			border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;}
 			.dancer-eye._eye_left{left: 30px;}
@@ -81,7 +81,7 @@ body {width: 100%; font-family: Georgia, serif;
 	-ms-transition: all .2s;
 	-o-transition: all .2s;
 	transition: all .2s;}
-.bottom-buttons{display: none; margin: 20px 0; text-align: center;}
+.bottom-buttons{ margin: 20px 0; text-align: center;}
 	.dancer-make_beauty{display: inline-block;}
 	.button-play_again{display: inline-block;  margin: 0 30px 0;}
 	.button-do_again{display: inline-block;}
@@ -103,3 +103,29 @@ body {width: 100%; font-family: Georgia, serif;
 #play.ready{ display: block; }
 /*.dancer-make_beauty {display: none; position: relative; margin: 0; color: #fff;font-weight: bold;font-size: 18px;text-align: center;cursor: pointer; background: #e7544b; padding: 20px 10px; border: 1px solid #38201c;}*/
 
+#play{
+    display:none;
+}
+
+#play.ready{
+    display: inline-block;
+}
+
+.high,
+.low{
+    width:40px;
+    display:inline-block;
+    vertical-align:top;
+}
+
+.high{
+    background:red;
+}
+
+.low{
+    background:green;
+}
+.header-wrapper{
+    width:100%;
+    height:30px;
+}
