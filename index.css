@@ -739,7 +739,7 @@ body {width: 100%; font-family: Georgia, serif;
 .dancer-hand._left_hand{left: 322px; background: #002a7a;}
 .dancer-hand._right_hand{left: 327px;background: #7843a5;}
 
-.dancer-leg{top: 348px; width: 160px; height: 5px; background: #000;}
+.dancer-leg{top: 348px; width: 160px; height: 5px; background: #000;z-index: 3;}
 .dancer-leg._left_leg{left: 319px;background: #7843a5;}
 .dancer-leg._right_leg{left: 320px;background: #002a7a;}
 ._button_style{position: relative; text-align: center;color: #fff; background: #d3775f; padding: 20px 0; width: 200px; border: 1px solid #390d0c; font-size: 20px;
