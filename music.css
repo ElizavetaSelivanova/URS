@@ -127,7 +127,7 @@ body {width: 100%; font-family: Georgia, serif;
 }
 .header-wrapper{
     width:100%;
-    padding: 20px 0;
+    padding:0;
     text-align: center;
 }
 .instruction {
@@ -137,4 +137,9 @@ body {width: 100%; font-family: Georgia, serif;
 
 .instruction ul {
     text-align: left;
+    font-size: 22px;
+    margin: 10px;
+}
+.instruction h1{
+    margin: 10px 0 0;
 }

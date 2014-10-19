@@ -2,8 +2,9 @@
  * Created by iryna.levina on 19.10.2014.
  */
 var playButton = document.getElementById('play');
-
-var url = 'https://api.soundcloud.com/tracks/23681901/stream?consumer_key=T8Yki6U2061gLUkWvLA';
+/*
+var url = 'https://api.soundcloud.com/tracks/23681901/stream?consumer_key=T8Yki6U2061gLUkWvLA';*/
+var url = 'https://api.soundcloud.com/tracks/21344145/stream?consumer_key=T8Yki6U2061gLUkWvLA';
 
 
 // создаем аудио контекст

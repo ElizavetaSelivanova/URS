@@ -92,6 +92,16 @@ $(document).ready(function(){
         generateMovesList();
         $('body').off("keydown");
         ifRecordBeat = 0;
+        if (recordedBeatArray.length==0){
+            alert("Вы не задали биток =(")
+        }else{
+            $('.dancer-wrapper, .bottom-buttons').fadeIn();
+            $(".js-beat-start").addClass("hidden");
+            $('.js-buttons-block, .visual-look').hide();
+            generateMovesList();
+            $('body').off("keydown");
+            ifRecordBeat = 0;
+        }
 
     });
 
@@ -191,7 +201,7 @@ var checkBeat = function(){
             start = new Date();
             checkEmpty = 1;
         }
-        console.log(recordedBeatArray);
+
     });
 }
 
@@ -259,13 +269,12 @@ var generateMovesList = function(){
 }
 
 var playDance = function(dance){
-    console.log(dance);
     var whatRotateId, whatRotateElement, time;
     var timeOut;
     var i = -1;
     var legActive=0;
     var displayNumber = function() {
-        console.log("22")
+
         i++;
         humanPosition = moveBase[dance[i]].position;
         for (var j=0; j<=humanPosition.length;j++){
@@ -277,6 +286,7 @@ var playDance = function(dance){
         if (i>0){
             timeOut  = recordedBeatArray[i-1]*1000;
             rotate(whatRotateElement, moveBase[dance[i]].x ,recordedBeatArray[i]);
+            headRotate(timeOut/20, 5, recordedBeatArray[i-1]);
         }else{
             timeOut = 0;
         }
@@ -307,4 +317,19 @@ var playDance = function(dance){
     };
 
     displayNumber(); // to get the ball rolling
+}
+function headRotate(degree,left, time){
+    $('.dancer-head').css({
+		'-webkit-transform': 'rotateZ(' + degree + 'deg) translateX('+left+'%)',
+		'-moz-transform': 'rotateZ(' + degree + 'deg) translateX('+left+'%)',
+		'-ms-transform': 'rotateZ(' + degree + 'deg) translateX('+left+'%)',
+		'-o-transform': 'rotateZ(' + degree + 'deg) translateX('+left+'%)',
+		'transform': 'rotateZ(' + degree + 'deg) translateX('+left+'%)',
+        '-webkit-transition': 'all '+ time +'s',
+		'-moz-transition': 'all '+ time +'s',
+		'-ms-transition': 'all '+ time +'s',
+		'-o-transition': 'all '+ time +'s',
+		'transition': 'all '+ time +'s'
+	});
+
 }
